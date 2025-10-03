@@ -1,30 +1,35 @@
-# Personal-Web
-Fatmah Rohmah Tika
+# 🌐 Personal-Web
+**Fatmah Rohmah Tika**
 
-This is my personal website where I showcase my portfolio and blog about web development.
+Ini adalah personal website saya untuk menampilkan **portfolio** dan menulis tentang **web development**.  
 
-## Links
+---
 
+## 🔗 Links
 - [My Portfolio]()
 - [UI/UX Design Resources](https://www.figma.com/design/DewvqFtvxVzu9n8eVhq6Pq/Portofolio-Web?node-id=0-1&t=DgQUOxyr060rzVUc-1)
 
-## Social Media
+---
 
+## 📱 Social Media
 - [GitHub](https://github.com/ftmahrhmt)
 - [LinkedIn]()
-- etc...
+- dll...
 
-## Pages
+---
 
-- Home
-- About
+## 📄 Pages
+- Home  
+- About  
 
-## Technologies Used
+---
 
-- HTML
-- CSS
-- JavaScript
+## 🛠️ Technologies Used
+- HTML  
+- CSS  
+- JavaScript  
 
-## Preview
+---
 
-- ![Website Preview]()
+## 👀 Preview
+![Website Preview]()
