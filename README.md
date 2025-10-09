@@ -39,4 +39,4 @@ Ini adalah personal website saya untuk menampilkan **portfolio** dan menulis ten
 ---
 
 ## 👀 Preview
-![Website Preview](assets/Home.png)
+![Website Preview](/assets/Home.png)
