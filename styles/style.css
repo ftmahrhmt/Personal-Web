@@ -375,15 +375,32 @@ footer {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
-  .home, .about {
-    flex-direction: column;
-    text-align: center;
-  }
-  .intro-text, .about-text {
-    max-width: 100%;
-  }
-  .home-img img {
-    width: 200px;
-    margin-top: 20px;
-  }
+    .home, .about {
+        flex-direction: column;
+        text-align: center;
+    }
+    .intro-text, .about-text {
+        max-width: 100%;
+    }
+    .home-img img {
+        width: 200px;
+        margin-top: 20px;
+    }
+    .intro-text h1 {
+        font-size: 32px;
+        white-space: normal;
+    }
+    .intro-text h1 span {
+        font-size: 32px;
+    }
+    .intro-text p {
+        font-size: 14px;
+    }
+    .project-card {
+        width: 90%;
+    }
+    .skill-box {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
