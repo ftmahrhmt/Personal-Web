@@ -16,36 +16,60 @@ body {
 header {
   background-color: #d8e0d4;
   padding: 15px 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;  
+  margin: 0 auto;     
+}
+
+/* Logo kiri */
 .logo {
   font-size: 24px;
   font-weight: 600;
-  color: #4c6b57;
+  color: #EAB308;
 }
 
+/* Menu kanan */
 .nav-links {
   list-style: none;
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
   gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
+/* Teks link */
 .nav-links li a {
   text-decoration: none;
   color: #4c6b57;
-  font-weight: 500;
-  transition: 0.3s;
+  font-weight: 700; 
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-links li a:hover {
   color: #7fa37c;
+  transform: translateY(-2px);
 }
+
+/* Responsif (biar di HP tetep rapi) */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 40px;
+  }
+  .nav-links {
+    gap: 15px;
+  }
+}
+
 
 /* ===== HOME SECTION ===== */
 .home {
@@ -148,6 +172,7 @@ header {
   transform: translateY(-8px);
 }
 
+/* Warna background card */
 .project-card.red {
   background-color: #e57f84;
 }
@@ -160,9 +185,21 @@ header {
   background-color: #82a8c1;
 }
 
+/* Tambahan: style gambar/icon di dalam card */
+.project-card img.project-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+
 /* ===== SKILLS SECTION ===== */
 .skills {
-  background-color: #f0f3f0;
+  background-color: #E8EDDE;
   text-align: center;
   padding: 60px 80px;
 }
