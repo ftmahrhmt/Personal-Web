@@ -1,376 +1,282 @@
 /* ===== GENERAL STYLE ===== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "jusdon", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Judson", serif;
 }
 
 body {
-  background-color: #e7ede6;
-  color: #333;
-  line-height: 1.6;
+    background-color: #e7ede6;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* ===== NAVBAR ===== */
 header {
     padding: 15px 80px;
-    position: sticky;     
-    top: 0;              
-    z-index: 1000;       
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background-color: #50806B;  
 }
-
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;  
-    margin: 0 auto;     
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Logo kiri */
 .logo {
     font-size: 24px;
     font-weight: 600;
     color: #EAB308;
 }
 
-/* Menu kanan */
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
     gap: 25px;
-    margin: 0;
-    padding: 0;
 }
 
-/* Teks link */
 .nav-links li a {
     text-decoration: none;
-    color: #ffffff;  /* teks putih biar kontras di background hijau */
-    font-weight: 700; 
+    color: #ffffff;
+    font-weight: 700;
     transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-links li a:hover {
-    color: #d1e7c0;   /* warna hover yang terang */
+    color: #d1e7c0;
     transform: translateY(-2px);
 }
 
-
 /* ===== HOME SECTION ===== */
 .home {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 60px 80px;
-  background: linear-gradient(135deg, #FFFFFF 0%, #E8EDDE 53%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 80px;
+    background: linear-gradient(135deg, #FFFFFF 0%, #E8EDDE 53%);
+    flex-wrap: wrap; /* biar responsif */
 }
 
-
 .intro-text {
-  max-width: 50%;
-  flex: 1;
-  max-width: 50%; 
+    flex: 1;
+    max-width: 50%;
 }
 
 .intro-text h1 {
-  font-size: 60px;
-  line-height: 1.1;
-  white-space: nowrap;
+    font-size: 60px;
+    line-height: 1.2;
+    white-space: normal; /* penting supaya wrap di HP */
 }
 
 .intro-text h1 span {
-  color: #4c6b57;
+    color: #4c6b57;
 }
 
 .intro-text p {
-  margin: 15px 25;
-  color: #000000;
-  font-size: 16px;
-  max-width: 90%; 
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .social-icons img {
-  text-decoration: none;  
-  width: 30px;
-  height: 30px;
-  background-color: #50806B; 
-  border-radius: 70%;       
-  padding: 6px;              
-  margin-right: 10px;
-  transition: all 0.3s ease;        
+    width: 30px;
+    height: 30px;
+    background-color: #50806B;
+    border-radius: 50%;
+    padding: 6px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
 }
 
 .social-icons img:hover {
-  transform: scale(1.1);
-  background-color: #D8E0D4; 
+    transform: scale(1.1);
+    background-color: #D8E0D4;
 }
 
 .home-img {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .home-img img {
-  width: 450px;
-  max-width: 90%;
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
-  animation: float 5s ease-in-out infinite;
-  margin-bottom: -60px; 
-  margin-right: -80px;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+    animation: float 5s ease-in-out infinite;
 }
-
 
 /* ===== ABOUT SECTION ===== */
 .about {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #50806B;
-  padding: 80px 100px;
-  gap: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 100px;
+    gap: 60px;
+    background-color: #50806B;
+    flex-wrap: wrap;
 }
 
-/* --- BAGIAN FOTO --- */
-.about-img {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+.about-img, .about-text {
+    flex: 1;
+    min-width: 280px; /* agar tetap proporsional di HP */
 }
 
-/* --- KOTAK KREM PEMBUNGKUS FOTO --- */
 .img-box {
-  background-color: #E8EDDE;
-  width: 250px;
-  height: 350px;
-  border-radius: 25px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  border-radius: 150px 150px 0 0;
-  box-shadow: 0 8px 18px rgba(207, 223, 150, 0.708);
+    background-color: #E8EDDE;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-shadow: 0 8px 18px rgba(207, 223, 150, 0.7);
 }
 
-/* --- FOTO DI DALAM KOTAK --- */
 .img-box img {
-  width: 350px;
-  border-radius: 150px 150px 0 0;
-  position: absolute;
-  bottom: -36px; 
-  transition: transform 0.3s ease;
-}
-
-.img-box img:hover {
-  transform: scale(1.0);
-}
-
-.about-img:hover {
-  transform: scale(1.05);
+    width: 100%;
+    height: auto;
+    border-radius: 150px 150px 0 0;
 }
 
 .about-text {
-  flex: 1;
-  background-color: #E8EDDE;
-  border-radius: 25px;
-  padding: 30px 40px;
-  box-shadow: 0 8px 18px rgba(255, 255, 255, 0.4);
+    background-color: #E8EDDE;
+    border-radius: 25px;
+    padding: 30px 40px;
+    box-shadow: 0 8px 18px rgba(255,255,255,0.4);
 }
 
 .about-text h2 {
-  color: #4c6b57;
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 15px;
+    color: #4c6b57;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
 .about-text h2 span {
-  color: #EAB308;
+    color: #EAB308;
 }
 
 .about-text p {
-  color: #000000;
-  font-size: 17px;
-  line-height: 1.7;
-  text-align: justify;
+    color: #000;
+    font-size: 17px;
+    line-height: 1.7;
+    text-align: justify;
 }
-
 
 /* ===== PROJECT SECTION ===== */
 .project {
-  background-color: #e7ede6;
-  text-align: center;
-  padding: 60px 80px;
-}
-
-.project h2 {
-  font-size: 35px;
-  color: #4c6b57;
-  margin-bottom: 40px;
-}
-
-.project h3 {
-  font-size: 20px;
-  color: #393838;
-  margin-bottom: 5px;
-}
-
-.project p {
-  font-size: 16px;
-  color: #ffffff;
-  margin-bottom: 5px;
-   text-align: justify;
+    background-color: #e7ede6;
+    text-align: center;
+    padding: 60px 80px;
 }
 
 .project-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .project-card {
-  display: block;
-  text-decoration: none; 
-  color: inherit;           
-  width: 250px;
-  padding: 20px;
-  border-radius: 15px;
-  color: white;
-  text-align: center;
-  transition: transform 0.3s;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
+    transform: translateY(-8px);
 }
 
-/* Warna background card */
-.project-card.red {
-  background-color: #e57f84;
-}
-
-.project-card.yellow {
-  background-color: #e2c16a;
-}
-
-.project-card.blue {
-  background-color: #82a8c1;
-}
-
-/* Tambahan: style gambar/icon di dalam card */
 .project-card img.project-img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: 15px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  padding: 10px;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    padding: 10px;
 }
 
+.project-card.red { background-color: #e57f84; }
+.project-card.yellow { background-color: #e2c16a; }
+.project-card.blue { background-color: #82a8c1; }
 
 /* ===== SKILLS SECTION ===== */
-
 .skills {
     background-color: #E8EDDE;
     padding: 40px 20px;
 }
 
-.skills h2 {
-    font-size: 35px;
-    color: #4c6b57;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;        
-    justify-content: flex-start; 
-}
-
 .skill-box {
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 15px 30px;
-    width: auto;            
     border-radius: 50px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    display: flex;          
-    align-items: center;    
-    gap: 8px;                
-     margin-bottom: 20px; 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* biar icon bisa wrap di HP */
 }
-
-.skill-box img {
-    width: px;
-    height: 70px;
-}
-
 
 /* ===== CONTACT SECTION ===== */
 .contact {
-  background-color: #50806B;
-  text-align: center;
-  padding: 60px 80px;
+    background-color: #50806B;
+    text-align: center;
+    padding: 60px 40px;
 }
 
-.contact h2 {
-  font-size: 35px;
-  margin-bottom: 20px;
-  color: #EAB308;
-}
+.contact h2 { color: #EAB308; font-size: 35px; margin-bottom: 20px; }
+.contact p { color: #fff; max-width: 600px; margin: 0 auto 20px auto; }
 
-.contact p {
-  max-width: 600px;
-  margin: 0 auto 20px auto;
-  color: white;
-}
-
-.contact-info p {
-  margin: 0 auto 20px auto;
-  color: #EAB308;
+.contact-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 .contact-social-icons img {
-  width: 30px;
-  height: 30px;
-  background-color: #95998d; 
-  border-radius: 70%;       
-  padding: 6px;              
-  margin-right: 10px;
-  transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+    background-color: #95998d;
+    border-radius: 50%;
+    padding: 6px;
+    transition: all 0.3s ease;
 }
 
 .contact-social-icons img:hover {
-  transform: scale(1.1);
-  background-color: #D8E0D4; 
+    background-color: #D8E0D4;
 }
 
 /* ===== FOOTER ===== */
 footer {
-  background-color: #32493b;
-  color: #ddd;
-  text-align: center;
-  padding: 15px 0;
-  font-size: 14px;
-}
-
-/* ===== ANIMATIONS ===== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+    background-color: #32493b;
+    color: #ddd;
+    text-align: center;
+    padding: 15px 0;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -381,26 +287,22 @@ footer {
     }
     .intro-text, .about-text {
         max-width: 100%;
+        width: 100%;
     }
     .home-img img {
-        width: 200px;
-        margin-top: 20px;
+        max-width: 90%;
+        margin: 20px 0 0 0;
     }
-    .intro-text h1 {
-        font-size: 32px;
-        white-space: normal;
-    }
-    .intro-text h1 span {
-        font-size: 32px;
-    }
-    .intro-text p {
-        font-size: 14px;
-    }
-    .project-card {
-        width: 90%;
-    }
-    .skill-box {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+    .intro-text h1 { font-size: 32px; }
+    .intro-text p { font-size: 14px; }
+    .project-card { width: 90%; }
+    .skill-box { justify-content: center; }
+}
+
+@media (max-width: 600px) {
+    .intro-text h1 { font-size: 28px; }
+    .intro-text p { font-size: 13px; }
+    .about-text h2 { font-size: 28px; }
+    .about-text p { font-size: 15px; }
+    .home, .about { padding: 20px 10px; }
 }
