@@ -14,50 +14,53 @@ body {
 
 /* ===== NAVBAR ===== */
 header {
-  padding: 15px 80px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+    padding: 15px 80px;
+    position: sticky;     
+    top: 0;              
+    z-index: 1000;       
+    background-color: #50806B;  
 }
 
+
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;  
-  margin: 0 auto;     
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;  
+    margin: 0 auto;     
 }
 
 /* Logo kiri */
 .logo {
-  font-size: 24px;
-  font-weight: 600;
-  color: #EAB308;
+    font-size: 24px;
+    font-weight: 600;
+    color: #EAB308;
 }
 
 /* Menu kanan */
 .nav-links {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
 }
 
 /* Teks link */
 .nav-links li a {
-  text-decoration: none;
-  color: #4c6b57;
-  font-weight: 700; 
-  transition: color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    color: #ffffff;  /* teks putih biar kontras di background hijau */
+    font-weight: 700; 
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-links li a:hover {
-  color: #7fa37c;
-  transform: translateY(-2px);
+    color: #d1e7c0;   /* warna hover yang terang */
+    transform: translateY(-2px);
 }
+
 
 /* ===== HOME SECTION ===== */
 .home {
@@ -93,13 +96,14 @@ header {
 }
 
 .social-icons img {
+  text-decoration: none;  
   width: 30px;
   height: 30px;
   background-color: #50806B; 
   border-radius: 70%;       
   padding: 6px;              
   margin-right: 10px;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease;        
 }
 
 .social-icons img:hover {
@@ -156,7 +160,7 @@ header {
   justify-content: center;
   align-items: flex-end;
   border-radius: 150px 150px 0 0;
-  box-shadow: 0 8px 18px rgba(76, 107, 87, 0.3);
+  box-shadow: 0 8px 18px rgba(207, 223, 150, 0.708);
 }
 
 /* --- FOTO DI DALAM KOTAK --- */
@@ -181,7 +185,7 @@ header {
   background-color: #E8EDDE;
   border-radius: 25px;
   padding: 30px 40px;
-  box-shadow: 0 8px 18px rgba(76, 107, 87, 0.4);
+  box-shadow: 0 8px 18px rgba(255, 255, 255, 0.4);
 }
 
 .about-text h2 {
@@ -237,6 +241,9 @@ header {
 }
 
 .project-card {
+  display: block;
+  text-decoration: none; 
+  color: inherit;           
   width: 250px;
   padding: 20px;
   border-radius: 15px;
@@ -314,7 +321,7 @@ header {
 
 /* ===== CONTACT SECTION ===== */
 .contact {
-  background-color: #4c6b57;
+  background-color: #50806B;
   text-align: center;
   padding: 60px 80px;
 }
