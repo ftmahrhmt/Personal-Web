@@ -21,7 +21,6 @@ header {
     background-color: #50806B;  
 }
 
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -30,37 +29,31 @@ header {
     margin: 0 auto;     
 }
 
-/* Logo kiri */
 .logo {
     font-size: 24px;
     font-weight: 600;
     color: #EAB308;
 }
 
-/* Menu kanan */
 .nav-links {
     list-style: none;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
+    gap: 20px;
 }
 
-/* Teks link */
 .nav-links li a {
     text-decoration: none;
-    color: #ffffff;  /* teks putih biar kontras di background hijau */
+    color: #ffffff; 
     font-weight: 700; 
     transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-links li a:hover {
-    color: #d1e7c0;   /* warna hover yang terang */
+    color: #EAB308; 
     transform: translateY(-2px);
 }
-
 
 /* ===== HOME SECTION ===== */
 .home {
@@ -73,32 +66,37 @@ header {
 
 
 .intro-text {
-  max-width: 50%;
   flex: 1;
-  max-width: 50%; 
+  max-width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .intro-text h1 {
-  font-size: 60px;
-  line-height: 1.1;
-  white-space: nowrap;
+  font-size: clamp(32px, 4vw, 60px); 
+  line-height: 1.2;
+  white-space: nowrap; 
+  word-break: keep-all;
+  color: #000;
 }
 
 .intro-text h1 span {
   color: #4c6b57;
+  font-weight: 700;
 }
 
 .intro-text p {
-  margin: 15px 25;
-  color: #000000;
-  font-size: 16px;
-  max-width: 90%; 
+  margin: 15px 0;
+  color: #000;
+  font-size: clamp(14px, 1.5vw, 18px);
+  max-width: 90%;
+  line-height: 1.6;
 }
 
 .social-icons img {
   text-decoration: none;  
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background-color: #50806B; 
   border-radius: 70%;       
   padding: 6px;              
@@ -107,7 +105,7 @@ header {
 }
 
 .social-icons img:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   background-color: #D8E0D4; 
 }
 
@@ -127,7 +125,7 @@ header {
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
   animation: float 5s ease-in-out infinite;
   margin-bottom: -60px; 
-  margin-right: -80px;
+  margin-right: -0px;
 }
 
 
@@ -141,7 +139,6 @@ header {
   gap: 60px;
 }
 
-/* --- BAGIAN FOTO --- */
 .about-img {
   flex: 1;
   display: flex;
@@ -149,7 +146,6 @@ header {
   align-items: flex-end;
 }
 
-/* --- KOTAK KREM PEMBUNGKUS FOTO --- */
 .img-box {
   background-color: #E8EDDE;
   width: 250px;
@@ -163,7 +159,6 @@ header {
   box-shadow: 0 8px 18px rgba(199, 210, 161, 0.708);
 }
 
-/* --- FOTO DI DALAM KOTAK --- */
 .img-box img {
   width: 350px;
   border-radius: 150px 150px 0 0;
@@ -202,7 +197,7 @@ header {
 .about-text p {
   color: #000000;
   font-size: 17px;
-  line-height: 1.7;
+  line-height: 1.5;
   text-align: justify;
 }
 
@@ -256,7 +251,6 @@ header {
   transform: translateY(-8px);
 }
 
-/* Warna background card */
 .project-card.red {
   background-color: #e57f84;
 }
@@ -269,7 +263,6 @@ header {
   background-color: #82a8c1;
 }
 
-/* Tambahan: style gambar/icon di dalam card */
 .project-card img.project-img {
   width: 80px;
   height: 80px;
@@ -279,7 +272,6 @@ header {
   border-radius: 50%;
   padding: 10px;
 }
-
 
 /* ===== SKILLS SECTION ===== */
 
@@ -314,8 +306,9 @@ header {
 }
 
 .skill-box img {
-    width: px;
+   max-width: 60px;
     height: 70px;
+    object-fit: contain;
 }
 
 
@@ -344,8 +337,8 @@ header {
 }
 
 .contact-social-icons img {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background-color: #95998d; 
   border-radius: 70%;       
   padding: 6px;              
@@ -369,21 +362,68 @@ footer {
 
 /* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { 
+    opacity: 0; 
+    transform: translateY(30px) scale(0.98); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0) scale(1); 
+  }
 }
+
+/* Efek animasi muncul halus untuk tiap section */
+section {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Tambahkan sedikit delay biar elegan */
+.home { animation-delay: 0.1s; }
+.about { animation-delay: 0.3s; }
+.skills { animation-delay: 0.5s; }
+.project { animation-delay: 0.7s; }
+
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .home, .about {
     flex-direction: column;
     text-align: center;
+    gap: 20px;
   }
+
   .intro-text, .about-text {
     max-width: 100%;
+    animation: fadeIn 0.8s ease-out;
   }
+
+  .home-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
   .home-img img {
-    width: 200px;
-    margin-top: 20px;
+    width: 70%;
+    max-width: 250px;
+    margin-top: 15px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+  }
+
+  .home-img img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.25));
+  }
+
+  .intro-text h1 {
+    font-size: clamp(28px, 6vw, 48px);
+    line-height: 1.2;
+  }
+
+  .intro-text p {
+    font-size: clamp(14px, 4vw, 18px);
+    color: #444;
   }
 }
