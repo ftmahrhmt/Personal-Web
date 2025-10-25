@@ -316,8 +316,7 @@ header {
 .contact {
   background-color: #50806B;
   text-align: center;
-  justify-content: space-between;
-  padding-left: 30px;
+  padding: 20px;
 }
 
 .contact h2 {
@@ -327,13 +326,13 @@ header {
 }
 
 .contact p {
-  font-size: 1rem;
-  line-height: 1.6;
+   font-size: 1rem;
+    line-height: 1.6;
   color: white;
 }
 
 .contact-info p {
-  margin: 0 auto 6\20px auto;
+  margin: 0 auto 20px auto;
   color: #EAB308;
 }
 
@@ -348,7 +347,7 @@ header {
 }
 
 .contact-social-icons img:hover {
-  transform: scale(1.6);
+  transform: scale(1.1);
   background-color: #D8E0D4; 
 }
 
@@ -386,7 +385,7 @@ section {
 .project { animation-delay: 0.7s; }
 
 
-/* ===== RESPONSIVE UNIVERSAL ===== */
+//* ===== RESPONSIVE UNIVERSAL ===== */
 
 /* Tablet & Laptop kecil (≤ 1024px) */
 @media (max-width: 1024px) {
