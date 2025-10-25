@@ -320,13 +320,13 @@ header {
 }
 
 .contact h2 {
-  font-size: 1.8rem;
+  font-size: 25px;
   margin-bottom: 20px;
   color: #EAB308;
 }
 
 .contact p {
- font-size: 1rem;
+ font-size: 15px;
     line-height: 1.6;
   color: white;
 }
