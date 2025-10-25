@@ -386,11 +386,35 @@ section {
 
 
 /* ===== RESPONSIVE ===== */
+
+/* Untuk layar di bawah 1024px (tablet landscape dan laptop kecil) */
+@media (max-width: 1024px) {
+  .home, .about {
+    gap: 30px;
+    padding: 40px 60px;
+  }
+
+  .intro-text h1 {
+    font-size: clamp(32px, 4vw, 48px);
+  }
+
+  .intro-text p {
+    font-size: clamp(15px, 1.6vw, 18px);
+  }
+
+  .home-img img {
+    width: 80%;
+    max-width: 350px;
+  }
+}
+
+/* Untuk layar di bawah 900px (tablet portrait & HP besar) */
 @media (max-width: 900px) {
   .home, .about {
     flex-direction: column;
     text-align: center;
-    gap: 20px;
+    gap: 25px;
+    padding: 40px 30px;
   }
 
   .intro-text, .about-text {
@@ -408,7 +432,7 @@ section {
   .home-img img {
     width: 70%;
     max-width: 250px;
-    margin-top: 15px;
+    margin-top: 20px;
     transition: transform 0.4s ease, filter 0.4s ease;
   }
 
@@ -418,12 +442,68 @@ section {
   }
 
   .intro-text h1 {
-    font-size: clamp(28px, 6vw, 48px);
+    font-size: clamp(28px, 6vw, 42px);
     line-height: 1.2;
+    white-space: normal; /* biar teks bisa turun rapi tanpa overflow */
   }
 
   .intro-text p {
-    font-size: clamp(14px, 4vw, 18px);
+    font-size: clamp(14px, 4vw, 17px);
     color: #444;
   }
 }
+
+/* Untuk layar di bawah 600px (HP kecil) */
+@media (max-width: 600px) {
+  header {
+    padding: 10px 25px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .intro-text h1 {
+    font-size: clamp(24px, 7vw, 36px);
+  }
+
+  .intro-text p {
+    font-size: clamp(13px, 4vw, 16px);
+  }
+
+  .about {
+    padding: 50px 25px;
+  }
+
+  .about-text {
+    padding: 25px 20px;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+
+  .skill-box img {
+    height: 50px;
+  }
+}
+
+/* Untuk layar di bawah 400px (HP sangat kecil) */
+@media (max-width: 400px) {
+  .intro-text h1 {
+    font-size: 22px;
+  }
+
+  .intro-text p {
+    font-size: 13px;
+  }
+
+  .home-img img {
+    max-width: 200px;
+  }
+}
+
